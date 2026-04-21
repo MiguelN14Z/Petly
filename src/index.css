@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-primary: #005e53;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #00796b;
+  --color-on-primary-container: #a1feec;
+  --color-primary-fixed: #97f3e2;
+  --color-on-primary-fixed-variant: #005047;
+  
+  --color-secondary: #005faf;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #54a0fe;
+  --color-on-secondary-container: #003567;
+  --color-secondary-fixed: #d4e3ff;
+  --color-on-secondary-fixed-variant: #004786;
+  --color-secondary-fixed-dim: #a5c8ff;
+
+  --color-tertiary: #854000;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #a95400;
+  --color-on-tertiary-container: #ffe9dd;
+  --color-tertiary-fixed: #ffdcc6;
+  --color-on-tertiary-fixed-variant: #723600;
+
+  --color-surface: #f8f9fa;
+  --color-on-surface: #191c1d;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container-highest: #e1e3e4;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #3e4946;
+  
+  --color-outline: #6e7a76;
+  --color-outline-variant: #bdc9c5;
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* shadcn compatibility */
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-on-surface);
+  --color-card: var(--color-surface-container-lowest);
+  --color-card-foreground: var(--color-on-surface);
+  --color-popover: var(--color-surface-container-lowest);
+  --color-popover-foreground: var(--color-on-surface);
+  --color-muted: var(--color-surface-container-low);
+  --color-muted-foreground: var(--color-on-surface-variant);
+  --color-accent: var(--color-surface-container);
+  --color-accent-foreground: var(--color-on-surface);
+  --color-destructive: var(--color-error);
+  --color-destructive-foreground: var(--color-on-error);
+  --color-border: var(--color-outline-variant);
+  --color-input: var(--color-outline-variant);
+  --color-ring: var(--color-primary);
+  
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
